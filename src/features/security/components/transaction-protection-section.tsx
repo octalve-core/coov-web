@@ -1,0 +1,2 @@
+import { ContentSection } from "@/components/shared/content-section";
+export function TransactionProtectionSection(){return <ContentSection eyebrow="Transactions" title="Verify important money movement." body="Financial state changes are intended to be verified server-side rather than trusted from the mobile client." items={['Server-side verification','Idempotent operations','Webhook verification']} light={true}/>}

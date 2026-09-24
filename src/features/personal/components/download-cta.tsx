@@ -1,0 +1,1 @@
+import { AppDownloadCta } from "@/components/shared/app-download-cta";import { Container } from "@/components/ui/container";import { Section } from "@/components/ui/section";export function DownloadCta(){return <Section><Container><AppDownloadCta/></Container></Section>}

@@ -1,0 +1,2 @@
+import Image from "next/image";import { cn } from "@/lib/cn";
+export function AppPhoneMockup({src,alt,className}:{src:string;alt:string;className?:string}){return <div className={cn("relative mx-auto w-full max-w-[360px] overflow-hidden rounded-[40px] border border-white/15 bg-black p-2 shadow-[0_40px_120px_rgba(112,53,231,.28)]",className)}><Image src={src} alt={alt} width={720} height={1100} className="h-auto w-full rounded-[34px]"/></div>}

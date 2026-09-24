@@ -1,0 +1,1 @@
+import { describe,expect,it } from "vitest";import { faqs } from "@/data/faqs";describe("FAQ data",()=>{it("contains only non-empty question/answer pairs",()=>{for(const faq of faqs){expect(faq.question.trim().length).toBeGreaterThan(0);expect(faq.answer.trim().length).toBeGreaterThan(0)}})});

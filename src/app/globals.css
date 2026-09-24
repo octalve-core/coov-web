@@ -1,0 +1,202 @@
+@import "tailwindcss";
+:root {
+  --coov-ivory: #f7f4ef;
+  --coov-gold: #c79b52;
+  --coov-purple: #7035e7;
+  --coov-purple-deep: #5821b3;
+  --coov-plum: #160d20;
+  --coov-white: #ffffff;
+  --coov-border-dark: rgba(247, 244, 239, 0.12);
+  --coov-border-light: rgba(22, 13, 32, 0.12);
+  --coov-gradient: linear-gradient(
+    135deg,
+    #7035e7 0%,
+    #5821b3 55%,
+    #160d20 100%
+  );
+  --font-sans: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  background: var(--coov-plum);
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: clip;
+  background: var(--coov-plum);
+  color: var(--coov-ivory);
+  font-family: var(--font-sans);
+  font-synthesis: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  font: inherit;
+}
+::selection {
+  background: var(--coov-purple);
+  color: white;
+}
+:focus-visible {
+  outline: 3px solid var(--coov-gold);
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================================
+   COOV HERO BACKGROUND SLIDES
+   ============================================================ */
+
+.coov-hero-slide {
+  opacity: 0;
+  transform: scale(1);
+  animation: coovHeroImageFade 24s ease-in-out infinite;
+  will-change: opacity, transform;
+}
+
+.coov-hero-slide-1 {
+  animation-delay: 0s;
+}
+
+.coov-hero-slide-2 {
+  animation-delay: 8s;
+}
+
+.coov-hero-slide-3 {
+  animation-delay: 16s;
+}
+
+@keyframes coovHeroImageFade {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  29% {
+    opacity: 1;
+    transform: scale(1.025);
+  }
+
+  34% {
+    opacity: 0;
+    transform: scale(1.045);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.045);
+  }
+}
+
+/* ============================================================
+   ANIMATED COOV WORD
+   ============================================================ */
+
+.coov-animated-word {
+  position: relative;
+  min-width: 4.25ch;
+}
+
+.coov-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translate3d(-18px, 0, 0);
+  animation: coovValueMove 4.2s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  will-change: opacity, transform;
+}
+
+.coov-letter-1 {
+  animation-delay: 0s;
+}
+
+.coov-letter-2 {
+  animation-delay: 0.12s;
+}
+
+.coov-letter-3 {
+  animation-delay: 0.24s;
+}
+
+.coov-letter-4 {
+  animation-delay: 0.36s;
+}
+
+@keyframes coovValueMove {
+  0% {
+    opacity: 0;
+    transform: translate3d(-18px, 0, 0);
+  }
+
+  10% {
+    opacity: 0;
+    transform: translate3d(-18px, 0, 0);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  66% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  76% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  88% {
+    opacity: 0;
+    transform: translate3d(32px, 0, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(32px, 0, 0);
+  }
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .coov-hero-slide {
+    animation: none !important;
+    opacity: 0;
+    transform: none;
+  }
+
+  .coov-hero-slide-1 {
+    opacity: 1;
+  }
+
+  .coov-letter {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+}

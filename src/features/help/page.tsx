@@ -1,0 +1,1 @@
+import { FaqSection } from "./components/faq-section";import { HelpHero } from "./components/help-hero";import { SupportOptionsSection } from "./components/support-options-section";export default function HelpPage(){return <main><HelpHero/><FaqSection/><SupportOptionsSection/></main>}

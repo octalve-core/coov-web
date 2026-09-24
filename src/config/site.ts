@@ -1,0 +1,1 @@
+export const siteConfig={name:"COOV",tagline:"Move Value.",description:"Send, pay, save, and manage everyday money with COOV.",company:"COOV Technologies Ltd",baseUrl:process.env.NEXT_PUBLIC_SITE_URL||"http://localhost:3000"} as const;

@@ -1,0 +1,2 @@
+import type { Metadata } from "next";import { siteConfig } from "@/config/site";
+export function makeMetadata(title:string,description:string):Metadata{return {metadataBase:new URL(siteConfig.baseUrl),title:`${title} | COOV`,description,alternates:{canonical:"./"},openGraph:{title:`${title} | COOV`,description,type:"website",siteName:"COOV",images:[{url:"/social/og-default.png",width:1200,height:630,alt:"COOV — Move Value."}]},twitter:{card:"summary_large_image",title:`${title} | COOV`,description,images:["/social/og-default.png"]}}}

@@ -1,0 +1,1 @@
+import HomePage from "@/features/home/page";import { makeMetadata } from "@/lib/metadata";export const metadata=makeMetadata("Home","Send money, pay bills, save, and manage everyday payments with COOV.");export default function Page(){return <HomePage/>}

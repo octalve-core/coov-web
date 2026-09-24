@@ -1,0 +1,1 @@
+import { MarketingHero } from "@/components/shared/marketing-hero";export function HelpHero(){return <MarketingHero eyebrow="Help" title="Answers when you need them." body="Explore common questions about COOV and the product experience." image="/images/support/support-hero.webp"/>}

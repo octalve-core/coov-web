@@ -1,0 +1,3 @@
+import { expect,test } from "@playwright/test";
+for(const width of [390,768,1440])test(`homepage does not overflow at ${width}px`,async({page})=>{await page.setViewportSize({width,height:1000});await page.goto("/");await expect(page.getByRole("heading",{level:1})).toContainText("Money moves better with COOV");expect(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth)).toBe(false)});
+test("homepage store controls expose coming soon when URLs are absent",async({page})=>{await page.goto("/");await expect(page.getByText("Coming Soon").first()).toBeVisible()});

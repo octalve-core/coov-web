@@ -1,0 +1,2 @@
+import { Heading } from "@/components/ui/heading";import { Text } from "@/components/ui/text";
+export function SectionHeading({eyebrow,title,body,className=""}:{eyebrow?:string;title:string;body?:string;className?:string}){return <div className={"max-w-3xl "+className}>{eyebrow&&<Text variant="caption" className="mb-4 text-[#C79B52]">{eyebrow}</Text>}<Heading>{title}</Heading>{body&&<Text variant="large" className="mt-5 opacity-75">{body}</Text>}</div>}

@@ -1,0 +1,2 @@
+export type StoreLinkState={status:"available";href:string}|{status:"coming-soon";href:null};
+export function resolveStoreLink(input:string|null|undefined):StoreLinkState{const value=input?.trim();if(!value)return{status:"coming-soon",href:null};try{const url=new URL(value);if(url.protocol!=="https:")throw new Error("unsupported");return{status:"available",href:url.toString()}}catch{return{status:"coming-soon",href:null}}}

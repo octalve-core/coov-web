@@ -1,0 +1,2 @@
+import { ContentSection } from "@/components/shared/content-section";
+export function ProductCompanySection(){return <ContentSection eyebrow="COOV + COOV Technologies Ltd" title="Product brand, company foundation." body="COOV is the customer-facing financial technology product; COOV Technologies Ltd is the company behind it." items={['COOV — product brand','COOV Technologies Ltd — company']} light={true}/>}

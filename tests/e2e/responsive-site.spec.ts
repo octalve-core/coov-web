@@ -1,0 +1,4 @@
+import { expect,test } from "@playwright/test";
+const routes=["/","/personal","/business","/features","/savings","/bills-and-payments","/security","/about","/help","/download","/legal/privacy","/legal/terms","/legal/cookies"];
+for(const route of routes)for(const width of [390,768,1440])test(`${route} has no horizontal overflow at ${width}px`,async({page})=>{await page.setViewportSize({width,height:1000});const response=await page.goto(route);expect(response?.ok()).toBe(true);expect(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth)).toBe(false)});
+test("homepage internal links resolve",async({page})=>{await page.goto("/");const hrefs=await page.locator('a[href^="/"]').evaluateAll(els=>[...new Set(els.map(el=>el.getAttribute("href")).filter(Boolean))] as string[]);for(const href of hrefs){const response=await page.request.get(href);expect(response.ok(),href).toBe(true)}});

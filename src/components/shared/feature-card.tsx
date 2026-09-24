@@ -1,0 +1,2 @@
+import { cn } from "@/lib/cn";import { Heading } from "@/components/ui/heading";import { Text } from "@/components/ui/text";
+export function FeatureCard({title,body,children,className=""}:{title:string;body:string;children?:React.ReactNode;className?:string}){return <article className={cn("group relative min-h-[320px] overflow-hidden rounded-[30px] border border-white/10 p-6 sm:p-8",className)}><div className="relative z-10 max-w-md"><Heading variant="h3">{title}</Heading><Text className="mt-3 opacity-70">{body}</Text></div>{children}</article>}
